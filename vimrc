@@ -16,6 +16,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'justinmk/vim-syntax-extra'
+Bundle 'airblade/vim-gitgutter'
 
 syntax enable
 " allow backspace in insert mode
@@ -23,7 +24,8 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set t_Co=256
 
-colorscheme mustang
+colorscheme Monokai
+set guifont=Menlo:h14
 
 " display hidden buffers
 set hidden
