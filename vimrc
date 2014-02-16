@@ -17,6 +17,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'justinmk/vim-syntax-extra'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'kien/rainbow_parentheses.vim'
 
 syntax enable
 " allow backspace in insert mode
@@ -76,6 +77,12 @@ endfor
 " reload last position after reopening file
 " copied from docs, see :help g`
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Rainbow parenthesis always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " clear search results with enter
 map <CR> :noh <Cr>
