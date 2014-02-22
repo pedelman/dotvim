@@ -4,6 +4,14 @@ This is my daily vim configuration, I keep this up to date so that I can pull do
 
 ### Installation
 
+For a clean system, I usually clone down my repo and run the following.
+
+```
+mv dotvim .vim
+```
+
+If you already have a .vim folder, you can skip that step and just mv the ```vimrc``` file into the .vim folder, and proceed to symlink.
+
 Since I keep my vimrc in the .vim folder, you will need to symlink ```.vimrc``` and ```.vim/vimrc```.
 
 ```bash
@@ -22,6 +30,12 @@ Open up Vim, and in command mode, enter:
 
 ```
 :BundleInstall
+```
+
+Or, from the command line, you can enter:
+
+```
+vim +BundleInstall +qall
 ```
 
 This will open up a new vsplit and show you which libraries are getting installed.
