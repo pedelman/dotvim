@@ -19,6 +19,9 @@ Bundle 'justinmk/vim-syntax-extra'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'fatih/vim-go'
+Bundle 'bling/vim-airline'
 
 syntax enable
 " allow backspace in insert mode
