@@ -30,7 +30,7 @@ set encoding=utf-8
 set t_Co=256
 
 colorscheme Monokai
-set guifont=Menlo:h14
+set guifont=Menlo:h15
 
 " display hidden buffers
 set hidden
