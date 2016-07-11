@@ -138,15 +138,7 @@ endfunction
 
 map <leader>n :call RenameFile()<cr>
 
-function! g:ToggleNuMode()
-  if(&rnu == 1)
-    set nornu
-  else
-    set rnu
-  endif
-endfunction
-
-map <leader># :call g:ToggleNuMode()<cr>
+map <leader># :set relativenumber!<cr>
 
 " allow % to match closing tags in html
 runtime! macros/matchit.vim
