@@ -6,21 +6,14 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'mileszs/ack.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
 Bundle 'justinmk/vim-syntax-extra'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
-Bundle 'fatih/vim-go'
 Bundle 'bling/vim-airline'
 
 syntax enable
@@ -29,8 +22,8 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set t_Co=256
 
-colorscheme Monokai
-set guifont=Menlo:h14
+colorscheme Solarized
+set guifont=Menlo
 
 " display hidden buffers
 set hidden
@@ -70,7 +63,6 @@ map <Leader>A ggVG
 set list 
 set listchars=tab:▸\ ,eol:¬
 
-
 " unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -81,12 +73,6 @@ endfor
 " reload last position after reopening file
 " copied from docs, see :help g`
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-" Rainbow parenthesis always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 " clear search results with enter
 map <CR> :noh <Cr>
@@ -147,8 +133,5 @@ function! g:ToggleNuMode()
 endfunction
 
 map <leader># :call g:ToggleNuMode()<cr>
-
-" allow % to match closing tags in html
-runtime! macros/matchit.vim
 
 filetype plugin indent on
